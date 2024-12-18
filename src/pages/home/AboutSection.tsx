@@ -7,9 +7,12 @@ const AboutSection = () => {
     <>
       <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
         <div className="container mx-auto">
+          <h2 className="block lg:hidden mb-5 text-[27px] font-bold font-robo-mono text-center text-black lg:text-3xl">
+            What is <span className="text-cgreen"> EcoVolt?</span>
+          </h2>
           <div className="flex flex-wrap items-center justify-between -mx-4">
             <div className="w-full px-4 lg:w-6/12">
-              <div className="flex items-center -mx-3 sm:-mx-4">
+              <div className="flex items-center -mx-3 sm:-mx-4 px-4">
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="py-3 sm:py-4">
                     <img src={solar} alt="" className="w-full rounded-2xl" />
@@ -597,14 +600,14 @@ const AboutSection = () => {
             </div>
 
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12 font-inter">
-              <div className="mt-10 lg:mt-0">
+              <div className="mt-10 lg:mt-0 px-4">
                 {/* <span className="block mb-4 text-lg font-semibold text-primary">
                   About Us
                 </span> */}
-                <h2 className="mb-5 text-3xl font-bold font-robo-mono text-black sm:text-[40px]/[48px]">
-                  What is <span className="text-green-400"> EcoVolt?</span>
+                <h2 className="hidden lg:block mb-5 text-[27px] font-bold font-robo-mono text-black lg:text-3xl">
+                  What is <span className="text-cgreen"> EcoVolt?</span>
                 </h2>
-                <p className="mb-5 text-lg  dark:text-dark-6">
+                <p className="mb-5 text-base">
                   The world is facing an urgent need for sustainable energy
                   solutions to combat climate change, reduce carbon footprints,
                   and secure a greener future.
@@ -616,21 +619,21 @@ const AboutSection = () => {
                 </p> */}
                 <ul className="flex flex-col space-y-3 text-base">
                   <li className="flex items-center gap-3 text-gray-600">
-                    <BsArrowRight className=" text-black" />
+                    <BsArrowRight className=" text-black " />
                     Use for EV charging, renewable energy funding, and carbon
                     credit purchases.
                   </li>
                   <li className="flex items-center gap-3 text-gray-600">
-                    <BsArrowRight className=" text-black" />
+                    <BsArrowRight className=" text-black " />
                     Built on Polygon, Solana, and TON for scalability and low
                     fees.
                   </li>
                   <li className="flex items-center gap-3 text-gray-600">
-                    <BsArrowRight className=" text-black" />
+                    <BsArrowRight className=" text-black " />
                     Rewards for eco-friendly actions like using EVs.
                   </li>
                 </ul>
-                <button className="mt-6 font-inter bg-[#0fcb7b] px-6 py-2 rounded-xl text-white transition">
+                <button className="mt-6 font-inter bg-cgreen px-6 py-2 rounded-xl text-white transition">
                   Get Started
                 </button>
               </div>

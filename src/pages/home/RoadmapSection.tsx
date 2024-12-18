@@ -1,112 +1,92 @@
 const RoadmapSection = () => {
-  const timelineData = [
+  const roadmapData = [
     {
-      year: "2021",
-      title: "FIRST STEPS",
+      phase: "Phase 1 :",
+      phasein: "Foundation (0-6 Months)",
+      title: "Token Launch",
       description:
-        "Lorem Ipsum is simply dummy text and typesetting industry. Lorem Ipsum has been the industry's standard.",
-      color: "text-cyan-500",
-      borderColor: "border-cyan-500",
+        "Launch EcoVolt on Polygon, Solana, and TON networks. Establish liquidity pools on DEXs and integrate with EV charging networks.",
+      date: "Q1 2024",
     },
     {
-      year: "2020",
-      title: "SECOND STEPS",
+      phase: "Phase 2 :",
+      phasein: "Growth (6–12 Months)",
+      title: " Crowdfunding Expansion",
       description:
-        "Lorem Ipsum is simply dummy text and typesetting industry. Lorem Ipsum has been the industry's standard.",
-      color: "text-orange-500",
-      borderColor: "border-orange-500",
+        "Launch a crowdfunding platform for green energy. Expand token payments to global EV charging stations and form partnerships with renewable energy providers.",
+      date: "Q2 2024",
     },
     {
-      year: "2019",
-      title: "THIRD STEPS",
+      phase: "Phase 3 :",
+      phasein: "Expansion (12–18 Months)",
+      title: "Carbon Marketplace",
       description:
-        "Lorem Ipsum is simply dummy text and typesetting industry. Lorem Ipsum has been the industry's standard.",
-      color: "text-red-500",
-      borderColor: "border-red-500",
+        "Develop a carbon credit marketplace and onboard governments and NGOs for blockchain-based carbon offset tracking. Expand token adoption globally.",
+      date: "Q3 2024",
     },
     {
-      year: "2018",
-      title: "FOURTH STEPS",
+      phase: "Phase 4 :",
+      phasein: "Innovation (18–24 Months)",
+      title: "Governance & Innovation",
       description:
-        "Lorem Ipsum is simply dummy text and typesetting industry. Lorem Ipsum has been the industry's standard.",
-      color: "text-blue-700",
-      borderColor: "border-blue-700",
-    },
-    {
-      year: "2017",
-      title: "FIFTH STEPS",
-      description:
-        "Lorem Ipsum is simply dummy text and typesetting industry. Lorem Ipsum has been the industry's standard.",
-      color: "text-cyan-400",
-      borderColor: "border-cyan-400",
-    },
-    {
-      year: "2016",
-      title: "SIXTH STEPS",
-      description:
-        "Lorem Ipsum is simply dummy text and typesetting industry. Lorem Ipsum has been the industry's standard.",
-      color: "text-green-500",
-      borderColor: "border-green-500",
+        "Launch a decentralized governance platform, introduce rewards for eco-friendly actions, and establish a Green Energy Research Fund for innovation.",
+      date: "Q4 2024",
     },
   ];
   return (
     <>
-      <div className="flex flex-col items-center bg-gray-50 py-16">
-        {/* Start Title */}
-        <div className="mb-10 text-center">
-          <h1 className="text-4xl font-bold text-gray-800 tracking-wider">
-            START
-          </h1>
-        </div>
+      <section className="bg-gradient-to-b from-green-50 via-white to-green-50 py-16 px-4 lg:px-32">
+        <h2 className="text-[27px] lg:text-3xl text-center font-bold text-cgreen font-robo-mono mb-12">
+          <span className="text-black">Our Roadmap to a</span> Sustainable
+          <span className="text-black"> Future</span>
+        </h2>
+        <div className="relative">
+          {/* Vertical Timeline Line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-green-300"></div>
 
-        {/* Timeline */}
-        <div className="relative w-full max-w-4xl">
-          {/* Vertical Line */}
-          <div className="absolute left-1/2 top-0 h-full w-1 bg-gray-300 transform -translate-x-1/2"></div>
-
-          {/* Timeline Items */}
-          {timelineData.map((item, index) => (
-            <div
-              key={index}
-              className={`flex w-full mb-12 ${
-                index % 2 === 0 ? "justify-start" : "justify-end"
-              }`}
-            >
-              {/* Content Container */}
+          <div className="space-y-12 lg:space-y-16">
+            {roadmapData.map((item, index) => (
               <div
-                className={`relative w-1/2 ${
-                  index % 2 === 0 ? "pl-10" : "pr-10 text-right"
-                }`}
+                key={index}
+                className={`flex flex-col items-center lg:items-${
+                  index % 2 === 0 ? "start" : "end"
+                } lg:flex-row ${
+                  index % 2 === 0 ? "" : "lg:flex-row-reverse"
+                } relative`}
               >
-                {/* Line Dot */}
-                <div
-                  className={`absolute top-4 left-0 w-8 h-8 rounded-full bg-white border-4 ${item.borderColor} transform -translate-x-1/2`}
-                ></div>
+                {/* Connector Line and Circle */}
+                <div className="hidden lg:flex items-center absolute left-1/2 transform -translate-x-1/2">
+                  <div className="w-4 h-4 rounded-full bg-green-700 lg:hidden xl:block shadow-lg border-4 border-white"></div>
+                </div>
 
-                {/* Content */}
-                <div className="bg-white rounded-lg shadow-lg p-5">
-                  <h3
-                    className={`text-lg font-bold uppercase mb-2 tracking-wide ${item.color}`}
-                  >
-                    {item.year}
+                {/* Roadmap Content */}
+                <div
+                  className={`bg-white shadow-md border  rounded-lg p-6 max-w-md w-full ${
+                    index % 2 === 0 ? "lg:ml-16" : "lg:mr-16"
+                  }`}
+                >
+                  <h3 className="text-xl font-semibold text-cgreen mb-2 font-inter">
+                    {item.phase}
+                    <span className="text-gray-600 font-normal text-base">
+                      {" "}
+                      {item.phasein}
+                    </span>
                   </h3>
-                  <h4 className="text-gray-800 font-semibold mb-2">
+                  <h4 className="text-2xl font-bold text-gray-800 mb-4 font-robo-mono">
                     {item.title}
                   </h4>
-                  <p className="text-gray-600 text-sm">{item.description}</p>
+                  <p className="text-gray-600 text-base font-inter">
+                    {item.description}
+                  </p>
+                  <p className="mt-4 text-sm font-medium text-cgreen font-inter">
+                    {item.date}
+                  </p>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-
-        {/* Finish Title */}
-        <div className="mt-10 text-center">
-          <h1 className="text-4xl font-bold text-gray-800 tracking-wider">
-            FINISH
-          </h1>
-        </div>
-      </div>
+      </section>
     </>
   );
 };
