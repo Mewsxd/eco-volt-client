@@ -1,5 +1,9 @@
 import HomePage from "./pages/home/HomePage";
 
 export default function App() {
-  return <HomePage />;
+  return (
+    <div className=" ">
+      <HomePage />
+    </div>
+  );
 }
