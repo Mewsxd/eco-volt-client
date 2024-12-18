@@ -8,6 +8,10 @@ export default {
         lexend: ["Lexend", "sans-serif"],
         inter: ["Inter", "serif"],
       },
+      colors: {
+        cgreen: "#0fcb7b",
+      
+      },
     },
   },
   plugins: [],
