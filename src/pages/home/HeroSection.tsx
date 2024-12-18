@@ -1,14 +1,65 @@
+import bkg from "../../assets/hero-bkg.jpg";
+
 const HeroSection = () => {
   return (
-    <div className=" text-center">
-      <h1>Fueling the Green Revolution with Blockchain Technology</h1>
-      <h2>
+    <div
+      className="relative bg-cover bg-center h-dvh md:h-[80vh] my-16 rounded-lg flex flex-col justify-center items-center text-white text-center"
+      style={{ backgroundImage: `url(${bkg})` }}
+    >
+      <h1 className="font-robo-mono text-3xl lg:text-5xl lg:max-w-5xl mb-4 z-10 mx-4">
+        Fueling the Green Revolution with{" "}
+        <span className=" text-green-400 leading-relaxed">Blockchain</span>{" "}
+        Technology
+      </h1>
+      <h2 className="font-inter text-base lg:text-lg mb-6 z-10 max-w-3xl mx-4">
         Introducing Your Token Name, the cryptocurrency driving renewable energy
         adoption. Pay for EV charging, fund green projects, and earn rewards for
         eco-friendly actions.
       </h2>
+      <div className="lg:space-x-4 z-10 mx-4 flex flex-col sm:flex-row items-center gap-5">
+        <button className=" font-inter bg-green-400 px-6 py-2 rounded-xl text-white transition">
+          Buy Now
+        </button>
+        <button className=" font-inter border px-6 py-2 rounded-xl text-white transition ">
+          Explore Our Mission
+        </button>
+      </div>
+      <h2 className="font-inter text-[15px] underline mb-6 z-10 max-w-64 lg:max-w-4xl mt-10 mx-4">
+        Join 10,000+ users in building a sustainable future
+      </h2>
+      <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
     </div>
   );
 };
 
 export default HeroSection;
+
+// import bkg from "../../assets/hero-bkg.jpg";
+
+// const HeroSection = () => {
+//   return (
+//     <div
+//       className="relative bg-cover bg-center text-white h-screen flex flex-col justify-center items-center"
+//       style={{ backgroundImage: `url(${bkg})` }}
+//     >
+//       <h1 className="font-robo-mono text-4xl mb-4 text-shadow">
+//         Fueling the Green Revolution with Blockchain Technology
+//       </h1>
+//       <h2 className="font-inter text-lg mb-6 text-shadow">
+//         Introducing Your Token Name, the cryptocurrency driving renewable energy
+//         adoption. Pay for EV charging, fund green projects, and earn rewards for
+//         eco-friendly actions.
+//       </h2>
+//       <div className="space-x-4">
+//         <button className="bg-green-500 px-4 py-2 rounded text-white hover:bg-green-600 transition">
+//           Buy Now
+//         </button>
+//         <button className="bg-blue-500 px-4 py-2 rounded text-white hover:bg-blue-600 transition">
+//           Explore Our Mission
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default HeroSection;
