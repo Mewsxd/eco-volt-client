@@ -38,7 +38,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-12 px-4 font-inter bg-white text-center my-16">
+    <section className=" px-4 font-inter bg-white text-center my-24">
       {/* Header Section */}
       <h2 className="text-3xl md:text-4xl font-bold font-robo-mono text-gray-900 mb-16">
         Why Choose <span className="text-green-400">EcoVolt?</span>

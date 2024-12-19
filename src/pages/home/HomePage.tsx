@@ -6,21 +6,33 @@ import Features from "./Features";
 import HeroSection from "./HeroSection";
 import Testimonials from "./Testimonial";
 import Tokenomics from "./Tokenomics";
+import Footer from "./Footer";
+import NavBar from "./NavBar";
+import Steps from "./StepCard";
+
 import BuyingSection from "./BuyingSection";
 // import ConnectWallet from "./WalletConnect";
 
+
 const HomePage = () => {
   return (
-    <div className=" max-w-7xl mx-auto">
+    <>
+      <NavBar />
       <HeroSection />
-      <AboutSection />
-      <RoadmapSection />
-      <FAQSection />
-      <BuyingSection />
-      <Features />
-      <Tokenomics />
-      <Testimonials />
-    </div>
+      <div className=" max-w-7xl mx-auto">
+        <AboutSection />
+        <Features />
+        <RoadmapSection />
+        <Tokenomics />
+         <BuyingSection />
+        <Testimonials />
+        <FAQSection />
+        {/* <Rtttt/> */}
+        <Steps/>
+        <Footer />
+      </div>
+    </>
+
   );
 };
 

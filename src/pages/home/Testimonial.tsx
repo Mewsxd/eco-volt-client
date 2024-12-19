@@ -1,7 +1,9 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+// @ts-ignore
 import "swiper/css";
+// @ts-ignore
 import "swiper/css/navigation";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
@@ -71,7 +73,7 @@ const Testimonials: React.FC = () => {
           >
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
-                <div className="flex flex-col items-center bg-[#00384F] p-8 rounded-lg shadow-lg transition-all duration-300 sm:hover:scale-105">
+                <div className="flex flex-col items-center bg-[#00384F] p-8 rounded-lg shadow-lg transition-all duration-300 ">
                   <p className="text-lg italic text-gray-300 mb-6 text-center">
                     "{testimonial.quote}"
                   </p>
