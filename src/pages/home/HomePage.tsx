@@ -1,29 +1,32 @@
-
 import AboutSection from "./AboutSection";
 import FAQSection from "./FaqSection";
-import HeroSection from "./HeroSection";
 import RoadmapSection from "./RoadmapSection";
 
 import Features from "./Features";
 import HeroSection from "./HeroSection";
 import Testimonials from "./Testimonial";
 import Tokenomics from "./Tokenomics";
-
+import Footer from "./Footer";
+import NavBar from "./NavBar";
+import Steps from "./StepCard";
 
 const HomePage = () => {
   return (
-    <div className=" max-w-7xl mx-auto">
+    <>
+      <NavBar />
       <HeroSection />
-
-      <AboutSection />
-      <RoadmapSection />
-      <FAQSection />
-
-      <Features />
-      <Tokenomics />
-      <Testimonials />
-
-    </div>
+      <div className=" max-w-7xl mx-auto">
+        <AboutSection />
+        <Features />
+        <RoadmapSection />
+        <Tokenomics />
+        <Testimonials />
+        <FAQSection />
+        {/* <Rtttt/> */}
+        <Steps/>
+        <Footer />
+      </div>
+    </>
   );
 };
 

@@ -35,7 +35,7 @@ const RoadmapSection = () => {
   ];
   return (
     <>
-      <section className="bg-gradient-to-b from-green-50 via-white to-green-50 py-16 px-4 lg:px-32">
+      <section className=" py-16 px-4 lg:px-32">
         <h2 className="text-[27px] lg:text-3xl text-center font-bold text-cgreen font-robo-mono mb-12">
           <span className="text-black">Our Roadmap to a</span> Sustainable
           <span className="text-black"> Future</span>
@@ -62,7 +62,7 @@ const RoadmapSection = () => {
                 {/* Roadmap Content */}
                 <div
                   className={`bg-white shadow-md border  rounded-lg p-6 max-w-md w-full ${
-                    index % 2 === 0 ? "lg:ml-16" : "lg:mr-16"
+                    index % 2 === 0 ? "lg:ml-14" : "lg:mr-14"
                   }`}
                 >
                   <h3 className="text-xl font-semibold text-cgreen mb-2 font-inter">
