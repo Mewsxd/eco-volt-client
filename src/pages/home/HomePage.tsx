@@ -10,6 +10,10 @@ import Footer from "./Footer";
 import NavBar from "./NavBar";
 import Steps from "./StepCard";
 
+import BuyingSection from "./BuyingSection";
+// import ConnectWallet from "./WalletConnect";
+
+
 const HomePage = () => {
   return (
     <>
@@ -20,6 +24,7 @@ const HomePage = () => {
         <Features />
         <RoadmapSection />
         <Tokenomics />
+         <BuyingSection />
         <Testimonials />
         <FAQSection />
         {/* <Rtttt/> */}
@@ -27,6 +32,7 @@ const HomePage = () => {
         <Footer />
       </div>
     </>
+
   );
 };
 

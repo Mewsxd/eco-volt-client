@@ -8,8 +8,10 @@ interface Step {
 
 const StepCard: React.FC<Step> = ({ step, title, description }) => {
   return (
-    <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition duration-300">
-      <div className="flex items-center space-x-4 mb-4">
+
+    <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition duration-300 ">
+      <div className="flex flex-col items-center space-x-4 space-y-4 mb-4">
+
         <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white w-12 h-12 flex items-center justify-center rounded-full text-xl font-bold">
           {step}
         </div>
@@ -41,17 +43,23 @@ const Steps: React.FC = () => {
     {
       step: 4,
       title: "Confirm Transaction",
-      description: "Confirm the transaction in your wallet to complete the process.",
+
+      description:
+        "Confirm the transaction in your wallet to complete the process.",
     },
   ];
 
   return (
-    <div className="bg-gray-100 py-12">
+
+    <div className=" py-12">
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl font-bold text-gray-800 text-center mb-8">
           Purchase Tokens in 4 Easy Steps
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div className="grid grid-cols-1 sm:grid-cols-4  gap-6">
+
           {steps.map((step) => (
             <StepCard
               key={step.step}

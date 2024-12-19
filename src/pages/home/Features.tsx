@@ -66,7 +66,7 @@ const Features = () => {
             </h3>
 
             {/* Description */}
-            <p className="text-gray-500 leading-relaxed max-w-xs text-sm">
+            <p className="text-gray-500 leading-relaxed max-w-xs text-base">
               {feature.description}
             </p>
 

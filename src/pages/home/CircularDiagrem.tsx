@@ -28,6 +28,10 @@ const CircularDiagram = () => {
             ))}
           </Pie>
           {/* Legend */}
+          {/* <div className="">
+            {" "}
+            <Legend layout="vertical" align="center" verticalAlign="bottom" />
+          </div> */}
           <Legend layout="vertical" align="center" verticalAlign="bottom" />
         </PieChart>
       </div>
