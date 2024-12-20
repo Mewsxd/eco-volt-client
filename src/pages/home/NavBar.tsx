@@ -115,38 +115,39 @@ const NavBar = () => {
 
   return (
     <>
-      {/* <nav className="bg-cblue h-[80px] font-inter">
-        <div className="max-w-7xl mx-auto flex items-center justify-between"> */}
       <nav className="bg-cblue h-[80px] font-inter">
         <div className="max-w-7xl mx-auto flex items-center justify-between h-full px-4">
           {/* Logo */}
           <div className="text-white text-xl font-bold">
-            <p className="text-2xl text-cgreen font-robo-mono">EcoVolt</p>
+            <p className=" md:text-3xl text-2xl text-cgreen font-robo-mono">
+              EcoVolt
+            </p>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8 items-center">
-            <a href="#" className="text-white hover:text-gray-300">
+          <div className="hidden md:flex space-x-8 items-center text-gray-300 text-base font-bold">
+            <a href="#" className="hover:text-gray-300">
               Home
             </a>
-            <a href="#" className="text-white hover:text-gray-300">
+            <a href="#" className="hover:text-gray-300">
               About
             </a>
-            <a href="#" className="text-white hover:text-gray-300">
+            <a href="#" className="hover:text-gray-300">
               Services
             </a>
-            <a href="#" className="text-white hover:text-gray-300">
+            <a href="#" className="hover:text-gray-300">
               Contact
             </a>
-            <button className="font-inter bg-green-400 px-6 py-2 rounded-xl text-white transition ">
+            {/* <button className="font-inter bg-green-400 px-6 py-2 rounded-xl text-white transition ">
               Connect
-            </button>
+            </button> */}
+            <w3m-button />
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-white focus:outline-none"
+            className="md:hidden text-black focus:outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
