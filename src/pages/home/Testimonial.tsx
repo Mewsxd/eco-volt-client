@@ -48,7 +48,7 @@ const Testimonials: React.FC = () => {
           What Our <span className="text-green-400">Users</span> Say
         </h2>
         <p className="text-center mb-12 text-gray-400 text-lg">
-          What Our Users Say: Empowering Green Energy with EcoVolt
+          Empowering Green Energy with EcoVolt
         </p>
 
         {/* Swiper Slider */}
