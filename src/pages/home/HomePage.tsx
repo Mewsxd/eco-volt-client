@@ -8,7 +8,6 @@ import Testimonials from "./Testimonial";
 import Tokenomics from "./Tokenomics";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
-import Steps from "./StepCard";
 
 import BuyingSection from "./BuyingSection";
 // import ConnectWallet from "./WalletConnect";
@@ -27,8 +26,6 @@ const HomePage = () => {
          <BuyingSection />
         <Testimonials />
         <FAQSection />
-        {/* <Rtttt/> */}
-        <Steps/>
         <Footer />
       </div>
     </>

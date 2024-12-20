@@ -1,9 +1,12 @@
+import { AppKitProvider } from "./config/AppKitProvider";
 import HomePage from "./pages/home/HomePage";
 
 export default function App() {
   return (
     <div className=" ">
-      <HomePage />
+      <AppKitProvider>
+        <HomePage />
+      </AppKitProvider>
     </div>
   );
 }

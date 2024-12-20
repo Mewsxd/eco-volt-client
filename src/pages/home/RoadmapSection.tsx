@@ -62,7 +62,7 @@ const RoadmapSection = () => {
                 {/* Roadmap Content */}
                 <div
                   className={`bg-white shadow-md border  rounded-lg p-6 max-w-md w-full ${
-                    index % 2 === 0 ? "lg:ml-14" : "lg:mr-14"
+                    index % 2 === 0 ? " lg:ml-8" : " lg:mr-8"
                   }`}
                 >
                   <h3 className="text-xl font-semibold text-cgreen mb-2 font-inter">

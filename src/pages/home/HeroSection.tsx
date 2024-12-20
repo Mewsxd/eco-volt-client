@@ -3,7 +3,7 @@ import bkg from "../../assets/hero-bkg.jpg";
 const HeroSection = () => {
   return (
     <div
-      className="relative bg-cover bg-center h-dvh md:h-[80vh] mb-16 flex flex-col justify-center items-center text-white text-center"
+      className="relative bg-cover bg-center h-dvh md:h-[92vh] mb-16 flex flex-col justify-center items-center text-white text-center"
       style={{ backgroundImage: `url(${bkg})` }}
     >
       <h1 className="font-robo-mono text-3xl lg:text-5xl lg:max-w-5xl mb-4 z-10 mx-4">
