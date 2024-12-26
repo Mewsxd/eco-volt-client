@@ -8,10 +8,8 @@ import Testimonials from "./Testimonial";
 import Tokenomics from "./Tokenomics";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
-
 import BuyingSection from "./BuyingSection";
 // import ConnectWallet from "./WalletConnect";
-
 
 const HomePage = () => {
   return (
@@ -23,13 +21,12 @@ const HomePage = () => {
         <Features />
         <RoadmapSection />
         <Tokenomics />
-         <BuyingSection />
+        <BuyingSection />
         <Testimonials />
         <FAQSection />
         <Footer />
       </div>
     </>
-
   );
 };
 

@@ -1,3 +1,4 @@
+import { HashLink } from "react-router-hash-link";
 import bkg from "../../assets/hero-bkg.jpg";
 
 const HeroSection = () => {
@@ -17,12 +18,16 @@ const HeroSection = () => {
         eco-friendly actions.
       </h2>
       <div className="lg:space-x-4 z-10 mx-4 flex flex-col sm:flex-row items-center gap-5">
-        <button className=" font-inter bg-green-400 px-6 py-2 rounded-xl text-white transition">
-          Buy Now
-        </button>
-        <button className=" font-inter border px-6 py-2 rounded-xl text-white transition ">
-          Explore Our Mission
-        </button>
+        <HashLink smooth to={"/#buying-section"}>
+          <button className=" font-inter bg-green-400 px-6 py-2 rounded-xl text-white transition">
+            Buy Now
+          </button>
+        </HashLink>
+        <HashLink smooth to={"/#about-section"}>
+          <button className=" font-inter border px-6 py-2 rounded-xl text-white transition ">
+            Explore Our Mission
+          </button>
+        </HashLink>
       </div>
       <h2 className="font-inter text-[15px] underline mb-6 z-10 max-w-64 lg:max-w-4xl mt-10 mx-4">
         Join 10,000+ users in building a sustainable future

@@ -63,14 +63,14 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className=" py-14 lg:py-24 bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-center items-center gap-x-16 gap-y-5 xl:gap-28 lg:flex-row lg:justify-between max-lg:max-w-2xl mx-auto max-w-full">
           <div className="mb-6 lg:mb-16 block lg:hidden">
             <h6 className="text-lg text-center font-medium text-cgreen mb-2 lg:text-left">
               FAQs
             </h6>
-            <h2 className="text-4xl text-center font-bold text-gray-900 leading-[3.25rem] mb-5 lg:text-left font-robo-mono">
+            <h2 className="text-3xl text-center font-bold text-gray-900 leading-[3.25rem] mb-5 lg:text-left font-robo-mono">
               Looking for answers?
             </h2>
           </div>
@@ -111,7 +111,9 @@ const FAQSection: React.FC = () => {
                     >
                       <span
                         className={`${
-                          activeIndex === index ? "text-cgreen font-medium " : ""
+                          activeIndex === index
+                            ? "text-cgreen font-medium "
+                            : ""
                         }`}
                       >
                         {faq.question}

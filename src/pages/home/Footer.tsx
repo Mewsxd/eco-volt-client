@@ -4,28 +4,14 @@ import { TiSocialYoutube } from "react-icons/ti";
 const Footer = () => {
   return (
     <>
-      {/* <footer className="footer bg-base-200 text-base-content rounded p-10 flex flex-col items-center justify-center gap-4 font-inter">
-        <p className="text-3xl font-bold text-cgreen font-robo-mono">EcoVolt</p>
-        <nav className="grid grid-flow-col gap-4 text-center text-base text-gray-600">
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
-        </nav>
-        <nav className="flex gap-4">
-          <TiSocialYoutube className="text-2xl" />
-          <BsTwitterX className="text-2xl" />
-        </nav>
-        <aside className="text-center">
-          <p>Copyright © EcoVolt | All rights reserved.</p>
-        </aside>
-      </footer> */}
       <footer className="shadow-lg font-inter text-gray-400 ">
         <div className="max-w-screen-xl mx-auto px-4 py-8 md:py-12">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {/* Logo Section */}
             <div className="col-span-2 md:col-span-1">
-              <h2 className="text-cgreen text-xl md:text-3xl font-semibold font-robo-mono">EcoVolt</h2>
+              <h2 className="text-cgreen text-xl md:text-3xl font-semibold font-robo-mono">
+                EcoVolt
+              </h2>
             </div>
             <div className="hidden md:block"></div>
             {/* Resources Section */}
@@ -96,10 +82,10 @@ const Footer = () => {
             </span>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white">
-              <TiSocialYoutube className="text-2xl" />
+                <TiSocialYoutube className="text-2xl" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white">
-              <BsTwitterX className="text-2xl" />
+                <BsTwitterX className="text-2xl" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white">
                 <i className="fab fa-twitter"></i>

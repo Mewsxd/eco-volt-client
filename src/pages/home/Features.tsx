@@ -38,9 +38,12 @@ const Features = () => {
   ];
 
   return (
-    <section className=" px-4 font-inter bg-white text-center my-24">
+    <section
+      id="services"
+      className=" px-4 font-inter bg-white text-center my-16 lg:my-24"
+    >
       {/* Header Section */}
-      <h2 className="text-3xl md:text-4xl font-bold font-robo-mono text-gray-900 mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold font-robo-mono text-gray-900 mb-10 lg:mb-16">
         Why Choose <span className="text-green-400">EcoVolt?</span>
       </h2>
       {/* <p className="text-gray-500 max-w-lg mx-auto mb-12 text-sm md:text-base">

@@ -35,8 +35,8 @@ const RoadmapSection = () => {
   ];
   return (
     <>
-      <section className=" py-16 px-4 lg:px-32">
-        <h2 className="text-[27px] lg:text-3xl text-center font-bold text-cgreen font-robo-mono mb-12">
+      <section className=" py-10 lg:py-16 px-4 lg:px-32">
+        <h2 className="text-3xl text-center font-bold text-cgreen font-robo-mono mb-12">
           <span className="text-black">Our Roadmap to a</span> Sustainable
           <span className="text-black"> Future</span>
         </h2>

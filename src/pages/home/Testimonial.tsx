@@ -1,9 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-// @ts-ignore
+// @ts-expect-error
 import "swiper/css";
-// @ts-ignore
+// @ts-expect-error
 import "swiper/css/navigation";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
@@ -41,14 +43,14 @@ const Testimonials: React.FC = () => {
   const nextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <section className=" text-black my-24 px-4 font-inter">
+    <section className=" text-black my-14 lg:my-24 px-4 font-inter">
       <div className="container mx-auto px-4">
         {/* Title */}
         <h2 className=" text-3xl sm:text-4xl font-extrabold font-robo-mono text-center mb-4 text-black">
           What Our <span className="text-green-400">Users</span> Say
         </h2>
         <p className="text-center mb-12 text-gray-400 text-lg">
-          What Our Users Say: Empowering Green Energy with EcoVolt
+          Empowering Green Energy with EcoVolt
         </p>
 
         {/* Swiper Slider */}

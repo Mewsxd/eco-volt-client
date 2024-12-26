@@ -5,9 +5,12 @@ import { BsArrowRight } from "react-icons/bs";
 const AboutSection = () => {
   return (
     <>
-      <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
+      <section
+        id="about-section"
+        className="overflow-hidden pt-6 pb-6 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark"
+      >
         <div className="container mx-auto">
-          <h2 className="block lg:hidden mb-5 text-[27px] font-bold font-robo-mono text-center text-black lg:text-3xl">
+          <h2 className="block lg:hidden mb-5 font-bold font-robo-mono text-center text-black text-3xl">
             What is <span className="text-cgreen"> EcoVolt?</span>
           </h2>
           <div className="flex flex-wrap items-center justify-between -mx-4">

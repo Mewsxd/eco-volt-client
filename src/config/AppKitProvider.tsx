@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { createAppKit } from "@reown/appkit/react";
 
 import { WagmiProvider } from "wagmi";
-import { arbitrum, mainnet } from "@reown/appkit/networks";
+import { mainnet, polygon, solana } from "@reown/appkit/networks";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WagmiAdapter } from "@reown/appkit-adapter-wagmi";
 
@@ -9,7 +10,7 @@ import { WagmiAdapter } from "@reown/appkit-adapter-wagmi";
 const queryClient = new QueryClient();
 
 // 1. Get projectId from https://cloud.reown.com
-const projectId = "daf3396c66938c8a6a28220ca23afa2e";
+const projectId = import.meta.env.VITE_REOWN_PROJECT_ID;
 
 // 2. Create a metadata object - optional
 const metadata = {
@@ -20,7 +21,7 @@ const metadata = {
 };
 
 // 3. Set the networks
-const networks = [mainnet, arbitrum];
+const networks = [mainnet, polygon, solana];
 
 // 4. Create Wagmi Adapter
 const wagmiAdapter = new WagmiAdapter({
@@ -32,12 +33,18 @@ const wagmiAdapter = new WagmiAdapter({
 // 5. Create modal
 createAppKit({
   adapters: [wagmiAdapter],
-  // @ts-ignore
+  // @ts-expect-error
   networks,
   projectId,
   metadata,
   features: {
     analytics: true, // Optional - defaults to your Cloud configuration
+  },
+  tokens: {
+    "eip155:1": {
+      address: "0x2AF5D2aD76741191D15Dfe7bF6aC92d4Bd912Ca3", // USDC on Ethereum
+      image: "https://etherscan.io/token/images/bitfinexleo_32.svg",
+    },
   },
 });
 interface AppKitProviderProps {

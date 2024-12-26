@@ -1,13 +1,28 @@
+import { MoonPayBuyWidget } from "@moonpay/moonpay-react";
 import Steps from "./StepCard";
+import { useState } from "react";
+import logo from "../../assets/moonpay.svg";
 
 const BuyingSection = () => {
+  const [visible, setVisible] = useState(false);
+
   return (
-    <div className="px-4 font-inter text-center py-24">
-      <h1 className=" text-3xl md:text-4xl font-bold font-robo-mono text-gray-900 mb-16">
+    <div
+      id="buying-section"
+      className="px-4 font-inter text-center py-12 lg:py-24"
+    >
+      <MoonPayBuyWidget
+        variant="overlay"
+        baseCurrencyCode="usd"
+        baseCurrencyAmount="100"
+        defaultCurrencyCode="eth"
+        visible={visible}
+      />
+      <h1 className=" text-3xl md:text-4xl font-bold font-robo-mono text-gray-900 mb-10 lg:mb-16">
         Get Your <span className=" text-green-400">EcoVolt Token</span> Today!
       </h1>
       <section className=" flex-col justify-between ">
-        <div className=" flex-1 flex flex-col text-xl justify-between  gap-8">
+        <div className=" flex-1 flex flex-col text-xl justify-between gap-4 lg:gap-8">
           <h2>
             Token: <span className=" font-bold">EcoVolt</span>
           </h2>
@@ -17,15 +32,27 @@ const BuyingSection = () => {
               0xB4F7cA91E01234ab3dEF5678Cc9aE091F1eD34bC
             </span>
           </h2>
-          <button className="hidden font-robo-mono bg-blue-950 px-8 py-4 text-2xl rounded-xl text-green-400 transition">
-            Buy Now
+          <button
+            onClick={() => {
+              console.log("Clicked");
+              setVisible(!visible);
+            }}
+            className="hidden font-robo-mono bg-[#7D00FF] px-8 py-4 text-2xl rounded-xl text-white transition"
+          >
+            <img src={logo} />
           </button>
         </div>
-        <div className=" flex-1 border mt-6">
+        <div className=" flex-1 mt-6">
           <Steps />
         </div>
-        <button className="block mx-auto mt-4 font-robo-mono bg-blue-950 px-8 py-4 text-2xl rounded-xl text-green-400 transition">
-          Buy Now
+        <button
+          onClick={() => {
+            console.log("Clicked");
+            setVisible(!visible);
+          }}
+          className="block mx-auto mt-4 font-robo-mono bg-[#7D00FF] px-8 py-4 text-2xl rounded-xl text-white transition"
+        >
+          <img src={logo} />
         </button>
       </section>
     </div>
