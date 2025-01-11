@@ -30,7 +30,7 @@ const NavBar = () => {
           {/* Logo */}
           <div className="text-white text-xl font-bold">
             <p className=" md:text-3xl text-2xl text-cgreen font-robo-mono">
-              EcoVolt
+              Solara 
             </p>
           </div>
 

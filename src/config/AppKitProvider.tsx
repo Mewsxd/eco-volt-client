@@ -14,7 +14,7 @@ const projectId = import.meta.env.VITE_REOWN_PROJECT_ID;
 
 // 2. Create a metadata object - optional
 const metadata = {
-  name: "EcoVolt",
+  name: "Solara Coin",
   description: "AppKit Example",
   url: "https://reown.com/appkit", // origin must match your domain & subdomain
   icons: ["https://assets.reown.com/reown-profile-pic.png"],

@@ -12,7 +12,7 @@ const AboutSection = () => {
       >
         <div className="container mx-auto">
           <h2 className="block lg:hidden mb-5 font-bold font-robo-mono text-center text-black text-3xl">
-            What is <span className="text-cgreen"> EcoVolt?</span>
+            What is <span className="text-cgreen"> Solara Coin?</span>
           </h2>
           <div className="flex flex-wrap items-center justify-between -mx-4">
             <div className="w-full px-4 lg:w-6/12">
@@ -609,7 +609,7 @@ const AboutSection = () => {
                   About Us
                 </span> */}
                 <h2 className="hidden lg:block mb-5 text-[27px] font-bold font-robo-mono text-black lg:text-3xl">
-                  What is <span className="text-cgreen"> EcoVolt?</span>
+                  What is <span className="text-cgreen"> Solara Coin?</span>
                 </h2>
                 <p className="mb-5 text-base">
                   The world is facing an urgent need for sustainable energy

@@ -19,17 +19,18 @@ const BuyingSection = () => {
         visible={visible}
       />
       <h1 className=" text-3xl md:text-4xl font-bold font-robo-mono text-gray-900 mb-10 lg:mb-16">
-        Get Your <span className=" text-green-400">EcoVolt Token</span> Today!
+        Get Your <span className=" text-green-400">Solara Token</span>{" "}
+        Today!
       </h1>
       <section className=" flex-col justify-between ">
         <div className=" flex-1 flex flex-col text-xl justify-between gap-4 lg:gap-8">
           <h2>
-            Token: <span className=" font-bold">EcoVolt</span>
+            Token: <span className=" font-bold">Solara Coin</span>
           </h2>
           <h2>
             Contract Address:{" "}
             <span className=" font-bold break-words">
-              0xB4F7cA91E01234ab3dEF5678Cc9aE091F1eD34bC
+            0xaAC208aBa017E39A51b9901d16beF8964776a569
             </span>
           </h2>
           <button

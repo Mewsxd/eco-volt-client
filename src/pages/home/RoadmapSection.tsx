@@ -5,7 +5,7 @@ const RoadmapSection = () => {
       phasein: "Foundation (0-6 Months)",
       title: "Token Launch",
       description:
-        "Launch EcoVolt on Polygon, Solana, and TON networks. Establish liquidity pools on DEXs and integrate with EV charging networks.",
+        "Launch Solara Coin on Polygon, Solana, and TON networks. Establish liquidity pools on DEXs and integrate with EV charging networks.",
       date: "Q1 2024",
     },
     {

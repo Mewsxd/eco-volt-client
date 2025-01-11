@@ -10,7 +10,7 @@ const Footer = () => {
             {/* Logo Section */}
             <div className="col-span-2 md:col-span-1">
               <h2 className="text-cgreen text-xl md:text-3xl font-semibold font-robo-mono">
-                EcoVolt
+                Solara 
               </h2>
             </div>
             <div className="hidden md:block"></div>
@@ -78,7 +78,7 @@ const Footer = () => {
           {/* Bottom Section */}
           <div className="mt-4 flex flex-col md:flex-row items-center justify-between">
             <span className="text-sm text-gray-400">
-              © 2024 EcoVolt™. All Rights Reserved.
+              © 2024 Solara Coin™. All Rights Reserved.
             </span>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white">
@@ -108,5 +108,5 @@ export default Footer;
 {
   /* <TiSocialYoutube className="text-2xl" />
 <BsTwitterX className="text-2xl" />
-          <p>Copyright © EcoVolt | All rights reserved.</p> */
+          <p>Copyright © Solara Coin | All rights reserved.</p> */
 }

@@ -13,7 +13,7 @@ const HeroSection = () => {
         Technology
       </h1>
       <h2 className="font-inter text-base lg:text-lg mb-6 z-10 max-w-3xl mx-4">
-        Introducing Your Token Name, the cryptocurrency driving renewable energy
+        Introducing Solara Coin, the cryptocurrency driving renewable energy
         adoption. Pay for EV charging, fund green projects, and earn rewards for
         eco-friendly actions.
       </h2>
