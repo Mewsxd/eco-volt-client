@@ -16,7 +16,7 @@ const testimonials = [
     name: "Jane Smith",
     position: "Sustainable Energy Consultant",
     quote:
-      "EcoVolt is a game-changer for sustainable energy projects. The token-based incentives and carbon tracking features are revolutionizing how we approach green initiatives.",
+      "Solara is a game-changer for sustainable energy projects. The token-based incentives and carbon tracking features are revolutionizing how we approach green initiatives.",
     image: "https://images.pexels.com/photos/3601757/pexels-photo-3601757.jpeg",
   },
   {
@@ -24,7 +24,7 @@ const testimonials = [
     name: "John Doe",
     position: "Software Engineer at Microsoft",
     quote:
-      "EcoVolt makes it easier than ever to integrate renewable energy solutions into everyday transactions. The crowdfunding platform and carbon credit marketplace are especially innovative.",
+      "Solara makes it easier than ever to integrate renewable energy solutions into everyday transactions. The crowdfunding platform and carbon credit marketplace are especially innovative.",
     image:
       "https://st.depositphotos.com/1144472/2003/i/450/depositphotos_20030237-stock-photo-cheerful-young-man-over-white.jpg",
   },
@@ -33,7 +33,7 @@ const testimonials = [
     name: "Alice Johnson",
     position: "Environmental Scientist",
     quote:
-      "I love how EcoVolt combines technology with sustainability. It’s a great step forward in promoting eco-friendly practices and supporting green projects.",
+      "I love how Solara combines technology with sustainability. It’s a great step forward in promoting eco-friendly practices and supporting green projects.",
     image: "https://images.pexels.com/photos/4050314/pexels-photo-4050314.jpeg",
   },
 ];
@@ -50,7 +50,7 @@ const Testimonials: React.FC = () => {
           What Our <span className="text-green-400">Users</span> Say
         </h2>
         <p className="text-center mb-12 text-gray-400 text-lg">
-          Empowering Green Energy with EcoVolt
+          Empowering Green Energy with Solara 
         </p>
 
         {/* Swiper Slider */}
