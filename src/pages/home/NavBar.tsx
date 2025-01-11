@@ -87,7 +87,7 @@ const NavBar = () => {
             >
               Contact
             </a>
-            {/* <button className="font-inter bg-green-400 px-6 py-2 mt-4 rounded-xl text-white transition">
+            {/* <button className="font-inter bg-cgreen px-6 py-2 mt-4 rounded-xl text-white transition">
               Connect
             </button> */}
             <w3m-button />
