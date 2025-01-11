@@ -19,7 +19,7 @@ const HeroSection = () => {
       </h2>
       <div className="lg:space-x-4 z-10 mx-4 flex flex-col sm:flex-row items-center gap-5">
         <HashLink smooth to={"/#buying-section"}>
-          <button className=" font-inter bg-green-400 px-6 py-2 rounded-xl text-white transition">
+          <button className=" font-inter bg-cgreen px-6 py-2 rounded-xl text-white transition">
             Buy Now
           </button>
         </HashLink>
