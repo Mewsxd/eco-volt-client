@@ -40,10 +40,11 @@ createAppKit({
   features: {
     analytics: true, // Optional - defaults to your Cloud configuration
   },
+  defaultNetwork: polygon,
   tokens: {
-    "eip155:1": {
-      address: "0x2AF5D2aD76741191D15Dfe7bF6aC92d4Bd912Ca3", // USDC on Ethereum
-      image: "https://etherscan.io/token/images/bitfinexleo_32.svg",
+    "eip155:137": {
+      address: "0xaAC208aBa017E39A51b9901d16beF8964776a569", // USDC on Ethereum
+      // image: "https://etherscan.io/token/images/bitfinexleo_32.svg",
     },
   },
 });

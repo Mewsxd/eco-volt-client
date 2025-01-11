@@ -2,6 +2,7 @@ import Ev from "../../assets/ev.webp";
 import turbines from "../../assets/wind-turbines.webp";
 import solar from "../../assets/solar-panel.webp";
 import { BsArrowRight } from "react-icons/bs";
+// import TokenPrice from "./TokenPrice";
 const AboutSection = () => {
   return (
     <>
@@ -643,6 +644,7 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
+        {/* <TokenPrice /> */}
       </section>
     </>
   );
