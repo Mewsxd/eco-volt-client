@@ -11,7 +11,6 @@ export default {
       colors: {
         cgreen: "#0fcb7b",
         cblue: "#00384F",
-        
       },
     },
   },

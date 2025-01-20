@@ -30,7 +30,7 @@ const NavBar = () => {
           {/* Logo */}
           <div className="text-white text-xl font-bold">
             <p className=" md:text-3xl text-2xl text-cgreen font-robo-mono">
-              Solara 
+              Solara
             </p>
           </div>
 
@@ -39,12 +39,14 @@ const NavBar = () => {
             <a href="#" className="hover:text-gray-300">
               Home
             </a>
-            <a href="#" className="hover:text-gray-300">
-              About
-            </a>
+            <HashLink smooth to={"/#about-section"}>
+              <a href="#" className="hover:text-gray-300">
+                About
+              </a>
+            </HashLink>
             <HashLink smooth to={"/#services"}>
               {/* <a href="#">Services</a> */}
-              <p className="hover:text-gray-300">Services</p>
+              <p className="hover:text-gray-300">Why Solara?</p>
             </HashLink>
             <a href="#" className="hover:text-gray-300">
               Contact
@@ -69,18 +71,30 @@ const NavBar = () => {
             >
               Home
             </a>
-            <a
-              href="#"
-              className="block w-full text-center px-4 py-4 hover:bg-blue-500"
+            <HashLink
+              smooth
+              to={"/#about-section"}
+              onClick={() => setIsMenuOpen(false)}
             >
-              About
-            </a>
-            <a
-              href="#"
-              className="block w-full text-center px-4 py-4 hover:bg-blue-500"
+              <a
+                href="#"
+                className="block w-full text-center px-4 py-4 hover:bg-blue-500"
+              >
+                About
+              </a>
+            </HashLink>
+            <HashLink
+              smooth
+              to={"/#services"}
+              onClick={() => setIsMenuOpen(false)}
             >
-              Services
-            </a>
+              <a
+                href="#"
+                className="block w-full text-center px-4 py-4 hover:bg-blue-500"
+              >
+                Why Solara?
+              </a>
+            </HashLink>
             <a
               href="#"
               className="block w-full text-center px-4 py-4 mb-4 hover:bg-blue-500"
