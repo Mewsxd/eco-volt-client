@@ -9,7 +9,8 @@ import Tokenomics from "./Tokenomics";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 import BuyingSection from "./BuyingSection";
-// import ConnectWallet from "./WalletConnect";
+
+import ContactSection from "./ContactSection";
 
 const HomePage = () => {
   return (
@@ -24,6 +25,7 @@ const HomePage = () => {
         <BuyingSection />
         <Testimonials />
         <FAQSection />
+        <ContactSection/>
         <Footer />
       </div>
     </>
