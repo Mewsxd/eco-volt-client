@@ -24,11 +24,11 @@ const Features = () => {
         "Earn tokens for using EVs or installing renewable energy systems.",
       icon: <FaGift />,
     },
-    {
-      title: "Any Time Support",
-      description: "Trade carbon credits transparently on the blockchain. ",
-      icon: <AiFillSafetyCertificate />,
-    },
+    // {
+    //   title: "Any Time Support",
+    //   description: "Trade carbon credits transparently on the blockchain. ",
+    //   icon: <AiFillSafetyCertificate />,
+    // },
     {
       title: "Sustainable Growth",
       description:
@@ -52,7 +52,7 @@ const Features = () => {
       </p> */}
 
       {/* Features Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {features.map((feature, index) => (
           <div
             key={index}
@@ -74,9 +74,9 @@ const Features = () => {
             </p>
 
             {/* Dashed Line */}
-            {index !== features.length - 1 && (
+            {/* {index !== features.length - 1 && (
               <div className="hidden lg:block absolute right-[-1.25rem] top-8 w-10 border-t-2 border-dashed border-blue-500"></div>
-            )}
+            )} */}
           </div>
         ))}
       </div>

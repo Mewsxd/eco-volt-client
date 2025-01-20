@@ -10,6 +10,7 @@ import Footer from "./Footer";
 import NavBar from "./NavBar";
 import BuyingSection from "./BuyingSection";
 import PolygonTokenPrice from "./TokenPrice";
+import ContactSection from "./ContactSection";
 // import ConnectWallet from "./WalletConnect";
 
 const HomePage = () => {
@@ -26,6 +27,7 @@ const HomePage = () => {
         <BuyingSection />
         <Testimonials />
         <FAQSection />
+        <ContactSection/>
         <Footer />
       </div>
     </>
