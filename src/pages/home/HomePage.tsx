@@ -9,6 +9,7 @@ import Tokenomics from "./Tokenomics";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 import BuyingSection from "./BuyingSection";
+import PolygonTokenPrice from "./TokenPrice";
 // import ConnectWallet from "./WalletConnect";
 
 const HomePage = () => {
@@ -18,6 +19,7 @@ const HomePage = () => {
       <HeroSection />
       <div className=" max-w-7xl mx-auto">
         <AboutSection />
+        <PolygonTokenPrice tokenAddress="0xaAC208aBa017E39A51b9901d16beF8964776a569" />
         <Features />
         <RoadmapSection />
         <Tokenomics />

@@ -62,3 +62,107 @@
 // };
 
 // export default TokenPrice;
+import React, { useState, useEffect } from "react";
+
+interface TokenPrice {
+  price: number;
+  symbol: string;
+  lastUpdated: string;
+}
+
+interface TokenPriceProps {
+  tokenAddress: string;
+  refreshInterval?: number;
+}
+
+const PolygonTokenPrice: React.FC<TokenPriceProps> = ({
+  tokenAddress,
+  refreshInterval = 30000,
+}) => {
+  const [priceData, setPriceData] = useState<TokenPrice | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchPrice = async () => {
+    try {
+      const apiKey =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6ImJlYzM5OTU1LWI0MjAtNDRlZi05YTBkLTFiZjllMGUyNmI0MSIsIm9yZ0lkIjoiMzk1Mzk4IiwidXNlcklkIjoiNDA2MzAzIiwidHlwZUlkIjoiZDU1NTdmYWQtYjdkZC00MmE5LTg1ZTEtM2YwZjFlYjcyMWNhIiwidHlwZSI6IlBST0pFQ1QiLCJpYXQiOjE3MTc3MzYyMjAsImV4cCI6NDg3MzQ5NjIyMH0.STwAVPjRBLIj0pJ_19fKSXv-Q8AdVeSJyVeisXYRUCg";
+      const url = `https://deep-index.moralis.io/api/v2/erc20/${tokenAddress}/price?chain=polygon`;
+
+      console.log("Fetching token price from:", url);
+
+      const response = await fetch(url, {
+        headers: {
+          Accept: "application/json",
+          "X-API-Key": apiKey,
+        },
+      });
+
+      if (!response.ok) {
+        const errorDetails = await response.text();
+        throw new Error(
+          `Failed to fetch token price: ${response.status} ${errorDetails}`
+        );
+      }
+
+      const data = await response.json();
+
+      setPriceData({
+        price: data.usdPrice,
+        symbol: data.tokenSymbol,
+        lastUpdated: new Date().toISOString(),
+      });
+      setError(null);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to fetch price");
+      console.error("Error fetching price:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchPrice();
+
+    const interval = setInterval(fetchPrice, refreshInterval);
+    return () => clearInterval(interval);
+  }, [tokenAddress, refreshInterval]);
+
+  if (loading) {
+    return <div className="p-4">Loading token price...</div>;
+  }
+
+  if (error) {
+    return (
+      <div className="p-4 text-red-500">
+        Error: {error}
+        <button
+          onClick={fetchPrice}
+          className="ml-2 px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"
+        >
+          Retry
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="p-4 border rounded shadow-sm">
+      <h2 className="text-xl font-bold mb-2">{priceData?.symbol} Price</h2>
+      <div className="text-2xl font-semibold text-green-600">
+        ${priceData?.price.toFixed(6)}
+      </div>
+      <div className="text-sm text-gray-500 mt-2">
+        Last updated: {new Date(priceData?.lastUpdated || "").toLocaleString()}
+      </div>
+      <button
+        onClick={fetchPrice}
+        className="mt-3 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+      >
+        Refresh Price
+      </button>
+    </div>
+  );
+};
+
+export default PolygonTokenPrice;
