@@ -66,32 +66,32 @@ const FAQSection: React.FC = () => {
     <section className=" py-14 lg:py-24 bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-center items-center gap-x-16 gap-y-5 xl:gap-28 lg:flex-row lg:justify-between max-lg:max-w-2xl mx-auto max-w-full">
-          <div className="mb-6 lg:mb-16 block lg:hidden">
+          <div className="mb-2 lg:mb-16 block lg:hidden">
             <h6 className="text-lg text-center font-medium text-cgreen mb-2 lg:text-left">
               FAQs
             </h6>
-            <h2 className="text-3xl text-center font-bold text-gray-900 leading-[3.25rem] mb-5 lg:text-left font-robo-mono">
+            <h2 className="text-3xl text-center font-bold text-gray-900 leading-[3.25rem] mb-2 lg:text-left font-robo-mono">
               Looking for answers?
             </h2>
           </div>
           {/* Image Section */}
-          <div className="w-full lg:w-1/2">
+          {/* <div className="w-full lg:w-1/2">
             <img
               src={faq}
               alt="FAQ Section"
               className="w-full rounded-full object-cover"
             />
-          </div>
+          </div> */}
 
           {/* FAQ Section */}
-          <div className="w-full lg:w-1/2">
-            <div className="lg:max-w-xl">
+          <div className="w-full">
+            <div className="lg:max-w-3xl mx-auto">
               {/* Section Title */}
               <div className="mb-6 lg:mb-16 hidden lg:block">
-                <h6 className="text-lg text-center font-medium text-cgreen mb-2 lg:text-left">
+                <h6 className="text-lg text-center font-medium text-cgreen mb-2">
                   FAQs
                 </h6>
-                <h2 className="text-4xl text-center font-bold text-gray-900 leading-[3.25rem] mb-5 lg:text-left font-robo-mono">
+                <h2 className="text-4xl text-center font-bold text-gray-900 leading-[3.25rem] mb-5 font-robo-mono">
                   Looking for answers?
                 </h2>
               </div>
@@ -101,7 +101,7 @@ const FAQSection: React.FC = () => {
                 {faqs.map((faq, index) => (
                   <div
                     key={faq.id}
-                    className={`border-b border-gray-200 py-6 font-inter ${
+                    className={`border-b border-gray-300 py-6 font-inter ${
                       activeIndex === index ? "active" : ""
                     }`}
                   >
@@ -113,7 +113,7 @@ const FAQSection: React.FC = () => {
                         className={`${
                           activeIndex === index
                             ? "text-cgreen font-medium "
-                            : ""
+                            : "font-semibold"
                         }`}
                       >
                         {faq.question}
@@ -138,7 +138,7 @@ const FAQSection: React.FC = () => {
                     {/* Accordion Content */}
                     {activeIndex === index && (
                       <div className="mt-4 pr-4">
-                        <p className="text-base text-gray-600 font-normal">
+                        <p className="text-base text-gray-500 font-normal">
                           {faq.answer}
                         </p>
                       </div>
