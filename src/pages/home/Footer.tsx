@@ -1,122 +1,9 @@
-// import { BsTwitterX } from "react-icons/bs";
-// import { TiSocialYoutube } from "react-icons/ti";
-
-// const Footer = () => {
-//   return (
-//     <>
-//       <footer className="shadow-lg font-inter text-gray-400 ">
-//         <div className="max-w-screen-xl mx-auto px-4 py-8 md:py-12">
-//           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-//             {/* Logo Section */}
-//             <div className="col-span-2 md:col-span-1">
-//               <h2 className="text-cgreen text-xl md:text-3xl font-semibold font-robo-mono">
-//                 Solara
-//               </h2>
-//             </div>
-//             <div className="hidden md:block"></div>
-//             {/* Resources Section */}
-//             <div>
-//               <h3 className="text-gray-600 text-sm font-semibold mb-4">
-//                 Resources
-//               </h3>
-//               <ul className="space-y-2">
-//                 <li>
-//                   <a href="#" className="hover:underline">
-//                     About
-//                   </a>
-//                 </li>
-//                 <li>
-//                   <a href="#" className="hover:underline">
-//                     Buy Now
-//                   </a>
-//                 </li>
-//               </ul>
-//             </div>
-
-//             {/* Follow Us Section */}
-//             <div>
-//               <h3 className="text-gray-600 text-sm font-semibold mb-4">
-//                 Follow Us
-//               </h3>
-//               <ul className="space-y-2">
-//                 <li>
-//                   <a href="#" className="hover:underline">
-//                     Github
-//                   </a>
-//                 </li>
-//                 <li>
-//                   <a href="#" className="hover:underline">
-//                     Discord
-//                   </a>
-//                 </li>
-//               </ul>
-//             </div>
-
-//             {/* Legal Section */}
-//             <div>
-//               <h3 className="text-gray-600 text-sm font-semibold mb-4">
-//                 Legal
-//               </h3>
-//               <ul className="space-y-2">
-//                 <li>
-//                   <a href="#" className="hover:underline">
-//                     Privacy Policy
-//                   </a>
-//                 </li>
-//                 <li>
-//                   <a href="#" className="hover:underline">
-//                     Terms & Conditions
-//                   </a>
-//                 </li>
-//               </ul>
-//             </div>
-//           </div>
-
-//           {/* Divider */}
-//           <div className="border-t border-gray-700 mt-8"></div>
-
-//           {/* Bottom Section */}
-//           <div className="mt-4 flex flex-col md:flex-row items-center justify-between">
-//             <span className="text-sm text-gray-400">
-//               © 2024 Solara Coin™. All Rights Reserved.
-//             </span>
-//             <div className="flex space-x-4 mt-4 md:mt-0">
-//               <a href="#" className="text-gray-400 hover:text-white">
-//                 <TiSocialYoutube className="text-2xl" />
-//               </a>
-//               <a href="#" className="text-gray-400 hover:text-white">
-//                 <BsTwitterX className="text-2xl" />
-//               </a>
-//               <a href="#" className="text-gray-400 hover:text-white">
-//                 <i className="fab fa-twitter"></i>
-//               </a>
-//               <a href="#" className="text-gray-400 hover:text-white">
-//                 <i className="fab fa-github"></i>
-//               </a>
-//               <a href="#" className="text-gray-400 hover:text-white">
-//                 <i className="fas fa-globe"></i>
-//               </a>
-//             </div>
-//           </div>
-//         </div>
-//       </footer>
-//     </>
-//   );
-// };
-
-// export default Footer;
-// {
-//   /* <TiSocialYoutube className="text-2xl" />
-// <BsTwitterX className="text-2xl" />
-//           <p>Copyright © Solara Coin | All rights reserved.</p> */
-// }
-
 const Footer = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className=" text-xl  font-bold flex items-center gap-1">
         {/* <img src={logo} className=" w-10" alt="logo" /> */}
-        <p className=" md:text-3xl text-xl text-cgreen font-robo-mono">
+        <p className=" md:text-3xl text-3xl text-cgreen font-robo-mono">
           Solara
         </p>
       </div>
@@ -229,8 +116,7 @@ const Footer = () => {
           </div>
           <div className=" py-6 md:flex md:items-center md:justify-between">
             <span className="text-sm text-gray-600 dark:text-gray-300 sm:text-center">
-              © 2025 <a href="https://flowbite.com/">TrueGold™</a>. All Rights
-              Reserved.
+              © 2025 Solara™. All Rights Reserved.
             </span>
             <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
               <a

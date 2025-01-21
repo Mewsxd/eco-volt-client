@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 // /* eslint-disable @typescript-eslint/no-explicit-any */
 // /* eslint-disable @typescript-eslint/ban-ts-comment */
 // import React, { useRef } from "react";
@@ -123,7 +124,8 @@
 // };
 
 // export default Testimonials;
-import React, { useCallback, useRef } from "react";
+import { useCallback, useRef } from "react";
+//@ts-ignore
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -132,11 +134,14 @@ const Testimonial = () => {
 
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
+    //@ts-ignore
     sliderRef.current.swiper.slidePrev();
   }, []);
 
   const handleNext = useCallback(() => {
     if (!sliderRef.current) return;
+    //@ts-ignore
+
     sliderRef.current.swiper.slideNext();
   }, []);
 
@@ -144,7 +149,7 @@ const Testimonial = () => {
     <>
       <section className="pb-20 pt-20 dark:bg-dark lg:pb-[120px] lg:pt-[120px] px-4">
         <h2 className=" lg:mb-10 text-3xl sm:text-4xl font-extrabold font-robo-mono text-center mb-8 text-black">
-        What Our <span className="text-cgreen">Users</span> Say {" "}
+          What Our <span className="text-cgreen">Users</span> Say{" "}
         </h2>
         <div className="container mx-auto">
           <Swiper slidesPerView={1} ref={sliderRef}>
@@ -168,7 +173,7 @@ const Testimonial = () => {
                 position="Sustainable Energy Consultant"
               />
             </SwiperSlide>
-            <div className="absolute left-0 right-0 z-10 flex items-center justify-center gap-5 sm:bottom-0">
+            <div className="absolute  left-0 right-0 z-50 flex items-center justify-center gap-5 bottom-0">
               <div className="prev-arrow cursor-pointer" onClick={handlePrev}>
                 <button className="d flex h-[60px] w-[60px] items-center justify-center rounded-full border border-stroke  text-dark transition-all hover:border-transparent hover:drop-shadow-testimonial dark:border-dark-3 dark:bg-dark-2 dark:hover:drop-shadow-none">
                   <svg
@@ -214,11 +219,16 @@ const Testimonial = () => {
 export default Testimonial;
 
 const SingleTestimonial = ({
+  //@ts-ignore
   image,
-  reviewImg,
-  reviewAlt,
+  //@ts-ignore
+
   details,
+  //@ts-ignore
+
   name,
+  //@ts-ignore
+
   position,
 }) => {
   return (

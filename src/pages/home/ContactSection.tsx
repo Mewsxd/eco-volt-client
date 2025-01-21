@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 const Contact = () => {
   return (
     <>
@@ -960,6 +961,7 @@ const Contact = () => {
 
 export default Contact;
 
+//@ts-ignore
 const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
   return (
     <>
@@ -976,6 +978,7 @@ const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
   );
 };
 
+//@ts-ignore
 const ContactInputBox = ({ type, placeholder, name }) => {
   return (
     <>

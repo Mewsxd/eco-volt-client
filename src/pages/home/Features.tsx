@@ -1,7 +1,6 @@
 import { MdOutlineCurrencyExchange } from "react-icons/md";
 import { SiMultisim } from "react-icons/si";
 import { FaGift } from "react-icons/fa";
-import { AiFillSafetyCertificate } from "react-icons/ai";
 import { MdOutlineSecurity } from "react-icons/md";
 
 const Features = () => {
