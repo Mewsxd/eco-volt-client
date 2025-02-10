@@ -28,7 +28,13 @@ const NavBar = () => {
       <nav className="bg-cblue h-[60px] font-inter">
         <div className="max-w-7xl mx-auto flex items-center justify-between h-full px-4">
           {/* Logo */}
-          <div className="text-white text-xl font-bold">
+          <div className="text-white text-xl font-bold flex items-center gap-2">
+            <button
+              onClick={toggleMenu}
+              className="lg:hidden text-white focus:outline-none"
+            >
+              <GiHamburgerMenu className=" text-2xl" />
+            </button>
             <p className=" md:text-3xl text-2xl text-cgreen font-robo-mono">
               Solara
             </p>
@@ -54,12 +60,15 @@ const NavBar = () => {
             <w3m-button />
           </div>
 
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden text-white focus:outline-none"
-          >
-            <GiHamburgerMenu className=" text-2xl" />
-          </button>
+          <div className="flex items-center gap-2 lg:hidden">
+            {/* <button
+              onClick={toggleMenu}
+              className="lg:hidden text-white focus:outline-none"
+            >
+              <GiHamburgerMenu className=" text-2xl" />
+            </button> */}
+            <w3m-button />
+          </div>
         </div>
 
         {/* Mobile Dropdown Menu */}
@@ -104,7 +113,7 @@ const NavBar = () => {
             {/* <button className="font-inter bg-cgreen px-6 py-2 mt-4 rounded-xl text-white transition">
               Connect
             </button> */}
-            <w3m-button />
+            {/* <w3m-button /> */}
           </div>
         )}
       </nav>
