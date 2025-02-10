@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import faq from "../../assets/faq.jpg";
+// import faq from "../../assets/faq.jpg";
 interface FAQItem {
   id: number;
   question: string;

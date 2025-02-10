@@ -1,7 +1,30 @@
 import { HashLink } from "react-router-hash-link";
 import bkg from "../../assets/hero-bkg.jpg";
+import { useEffect, useState } from "react";
 
 const HeroSection = () => {
+  const [tokenPrice, setTokenPrice] = useState<string | undefined>();
+  const [flash, setFlash] = useState(false);
+
+  const fetchTokenPrice = async () => {
+    const req = await fetch("https://solara-server.onrender.com/token_price");
+    const res = await req.json();
+    console.log(res);
+    setTokenPrice(res.token_price_usd);
+    // Trigger the flash effect
+    setFlash(true);
+    setTimeout(() => setFlash(false), 1000); // Remove after 1s
+  };
+
+  useEffect(() => {
+    fetchTokenPrice();
+    const interval = setInterval(() => {
+      fetchTokenPrice();
+    }, 5000);
+
+    // Cleanup function to clear interval when component unmounts
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div
       className="relative bg-cover bg-center h-dvh md:h-[92vh] mb-16 flex flex-col justify-center items-center text-white text-center"
@@ -32,6 +55,18 @@ const HeroSection = () => {
       <h2 className="font-inter text-[15px] underline mb-6 z-10 max-w-64 lg:max-w-4xl mt-10 mx-4">
         Join 10,000+ users in building a sustainable future
       </h2>
+      <div className="bg-black bg-opacity-60 w-fit h-fit flex flex-col sm:flex-row items-center px-4 z-10 text-lg py-2 rounded-lg">
+        <p className="text-white font-bold font-inter"> Solara price :</p>
+        <h2
+          className={`font-inter text-lg p-2 rounded-lg z-10 max-w-64 lg:max-w-4xl ml-0 sm:ml-4 transition-all duration-500 ${
+            flash ? "animate-flash " : ""
+          }`}
+        >
+          <span className="text-cgreen">$</span>
+          {tokenPrice ? `${tokenPrice}` : "Loading..."}
+        </h2>
+      </div>
+
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
     </div>
   );
