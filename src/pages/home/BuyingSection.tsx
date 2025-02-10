@@ -19,8 +19,7 @@ const BuyingSection = () => {
         visible={visible}
       />
       <h1 className=" text-3xl md:text-4xl font-bold font-robo-mono text-gray-900 mb-10 lg:mb-16">
-        Get Your <span className=" text-green-400">Solara Token</span>{" "}
-        Today!
+        Get Your <span className=" text-green-400">Solara Token</span> Today!
       </h1>
       <section className=" flex-col justify-between ">
         <div className=" flex-1 flex flex-col text-xl justify-between gap-4 lg:gap-8">
@@ -30,12 +29,11 @@ const BuyingSection = () => {
           <h2>
             Contract Address:{" "}
             <span className=" font-bold break-words">
-            0xaAC208aBa017E39A51b9901d16beF8964776a569
+              0xaAC208aBa017E39A51b9901d16beF8964776a569
             </span>
           </h2>
           <button
             onClick={() => {
-              console.log("Clicked");
               setVisible(!visible);
             }}
             className="hidden font-robo-mono bg-[#7D00FF] px-8 py-4 text-2xl rounded-xl text-white transition"
@@ -48,7 +46,6 @@ const BuyingSection = () => {
         </div>
         <button
           onClick={() => {
-            console.log("Clicked");
             setVisible(!visible);
           }}
           className="block mx-auto mt-4 font-robo-mono bg-[#7D00FF] px-8 py-4 text-2xl rounded-xl text-white transition"

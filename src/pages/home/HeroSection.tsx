@@ -2,15 +2,17 @@ import { HashLink } from "react-router-hash-link";
 import bkg from "../../assets/hero-bkg.jpg";
 import { useEffect, useState } from "react";
 
+type ApiResponse = {
+  token_price_usd: string;
+};
 const HeroSection = () => {
   const [tokenPrice, setTokenPrice] = useState<string | undefined>();
   const [flash, setFlash] = useState(false);
 
   const fetchTokenPrice = async () => {
     const req = await fetch("https://solara-server.onrender.com/token_price");
-    const res = await req.json();
-    console.log(res);
-    setTokenPrice(res.token_price_usd);
+    const res: ApiResponse = await req.json();
+    setTokenPrice(res.token_price_usd.slice(0, 7));
     // Trigger the flash effect
     setFlash(true);
     setTimeout(() => setFlash(false), 1000); // Remove after 1s

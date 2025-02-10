@@ -11,6 +11,7 @@ import NavBar from "./NavBar";
 import BuyingSection from "./BuyingSection";
 
 import ContactSection from "./ContactSection";
+import Chart from "./Chart";
 
 const HomePage = () => {
   return (
@@ -23,9 +24,10 @@ const HomePage = () => {
         <RoadmapSection />
         <Tokenomics />
         <BuyingSection />
+        <Chart />
         <Testimonials />
         <FAQSection />
-        <ContactSection/>
+        <ContactSection />
         <Footer />
       </div>
     </>
